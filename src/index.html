@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<title>TODO List</title>
+</head>
+<body>
+	<div class="container">
+		<div class="todo">
+			<h1 class="todo__title">TODO List</h1>
+
+			<div class="todo__tabs js-todoTabs">
+
+				<div class="todo__tabs-control">
+					<div class="btn-group btn-group--row">
+						<button class="btn btn--xl todo__tabs-btn js-todoTabsButton">Add new</button>
+						<button class="btn btn--xl todo__tabs-btn js-todoTabsButton">Search</button>
+					</div>
+				</div>				
+
+				<div class="todo__tabs-content">
+					<div class="todo__tabs-item js-todoTabsItem">
+						<div class="cancel-btn todo__tabs-close js-tabsClose"></div>
+						<form name="add-task" class="form js-addForm">
+							<div class="form__group">
+								<label class="form__label" for="todo-title">Title</label>
+								<input name="title" id="todo-title" type="text" class="form__control js-formInput" autocomplete="off">
+							</div>
+							<div class="form__group">
+								<label class="form__label" for="todo-description">Description</label>
+								<textarea name="description" id="todo-description" class="form__control js-formInput"></textarea>
+							</div>
+							<button class="btn btn--xl js-formButton" disabled>Add</button>
+						</form>
+					</div> 
+
+					<div class="todo__tabs-item js-todoTabsItem">
+						<div class="cancel-btn todo__tabs-close js-tabsClose"></div>
+						<form name="search-task" class="form js-searchForm">
+							<div class="form__group">
+								<input name="search" type="text" class="form__control js-formInput" placeholder="Search by title" autocomplete="off">
+								<div class="cancel-btn form__control-clear js-clearInputButton"></div>
+							</div>
+							<button class="btn btn--xl js-formButton" disabled>Search</button>
+						</form>
+					</div> 
+				</div>
+
+			</div>
+
+			<div class="todo__content">
+
+				<ul class="todo__actions js-todoActions">
+					<li class="todo__actions-item">
+						<a href="#" class="todo__actions-link">Bulk actions</a>
+						<ul class="dropdown js-bulkActions">
+							<li class="dropdown__item js-allDone">Mark as done</li>
+							<li class="dropdown__item js-allHold">Hold</li>
+							<li class="dropdown__item dropdown__item--delete js-allDelete">Delete</li>
+						</ul>
+					</li>
+					<li class="todo__actions-item">
+						<a href="#" class="todo__actions-link">Sort</a>	
+						<ul class="dropdown js-sortActions">
+							<li class="dropdown__item js-statusSort">By status</li>
+							<li class="dropdown__item js-titleSort">By title</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="todo__list js-todoList"></ul>
+			</div>
+		</div>		
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

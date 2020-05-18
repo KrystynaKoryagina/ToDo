@@ -1,0 +1,373 @@
+/* Reset style */
+*, 
+*::before, 
+*::after {
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: .1em;
+	background-color: #ce9bf5;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+p {
+	margin: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+button {
+	outline: none;
+}
+
+/* Custom style */
+.container {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+/* ===== Loader ===== */ 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation-delay: 1s;
+}
+.loader__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 7px;
+}
+.loader__item::before {
+	content: "";
+  width: 20px;
+  height: 20px;
+	border-radius: 50%;
+	animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+	transition: 0.5s all ease;
+	transform: scale(1);
+}
+.loader__item-1 {
+	background-color: #B98FD9;
+}
+.loader__item-1::before {
+	background-color: #B98FD9;
+	animation-delay: 100ms;
+}
+.loader__item-2 {
+	background-color: #a975d0;
+}
+.loader__item-2::before {
+	background-color: #a975d0;
+	animation-delay: 200ms;
+}
+.loader__item-3 {
+	background-color: #955ebf;
+}
+.loader__item-3::before {
+	background-color: #955ebf;
+	animation-delay: 300ms;
+}
+.loader__item-4 {
+	background-color: #8446b3;
+}
+.loader__item-4::before {
+	background-color: #8446b3;
+	animation-delay: 400ms;
+}
+.loader__item-5 {
+	background-color: #7633a9;
+}
+.loader__item-5::before {
+	background-color: #7633a9;
+	animation-delay: 500ms;
+}
+
+/* ===== Buttons ===== */
+.btn-group--row {
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	display: inline-block;
+	width: 100%;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: .1em;
+	background-color: transparent;
+	border: 2px solid #fff;
+	cursor: pointer;
+	transition: all .3s;
+}
+.btn:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+}
+.btn--xl {
+	padding: 20px 30px;
+}
+.btn--xs {
+	padding: 10px;
+}
+.btn[disabled],
+.btn[disabled]:hover {
+	color: #dad1d1;
+	border: 2px solid #dad1d1;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+.btn-group--row .btn:not(:first-child) {
+	margin-left: 15px;
+}
+
+/* ==== Cancel Button ===== */
+.cancel-btn {
+	position: absolute;
+	/* right: 5px;
+	top: 50%; */
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	opacity: 0.3;
+	cursor: pointer;
+}
+.cancel-btn:hover {
+	opacity: 1;
+}
+.cancel-btn::before, 
+.cancel-btn::after {
+	content: '';
+	position: absolute;
+	left: 10px;
+	height: 20px;
+	width: 2px;
+	background-color: #333;
+}
+.cancel-btn::before {
+	transform: rotate(45deg);
+}
+.cancel-btn::after {
+	transform: rotate(-45deg);
+}
+
+/* ===== Form ===== */
+.form {
+	padding: 40px 20px;
+	background-color: #9559F3;
+	border-radius: 10px;
+}
+.form--no-padding {
+	padding: 0;
+}
+.form__group {
+	position: relative;
+	margin-bottom: 20px;
+}
+.form__label {
+	display: block;
+	margin-bottom: 10px;
+}
+.form__control {
+	width: 100%;
+	height: 40px;
+	padding: 0 30px 0 10px;
+	color: #000;	
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+textarea.form__control {
+	min-height: 70px;
+	height: 100%;
+	padding: 10px;
+	resize: vertical;
+}
+.form__control-clear {
+	right: 5px;
+	top: 50%;
+}
+
+/* ===== Dropdown ===== */
+.dropdown {
+	position: absolute;
+	left: -9999px;
+	top: 100%;
+	width: 100%;
+	padding: 15px 0;
+	color: #9559F3;
+	text-align: left;
+	background-color: #fff;
+	border-radius: 5px;
+	z-index: 5;
+	opacity: 0;
+	transition: opacity .3s;
+}
+.dropdown::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -5px;
+	display: block;
+	width: 100%;
+	height: 10px;
+}
+.dropdown__item {
+	padding: 0 10px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: .3s;	
+}
+.dropdown__item--delete {
+	color: #ff0000
+}
+.dropdown__item:hover {
+	font-weight: 700;
+}
+.dropdown__item + .dropdown__item {
+	margin-top: 15px;
+}
+
+/* ===== Card ===== */
+.card {
+	position: relative;
+	padding: 50px 20px 30px;
+	background-color: #9559F3;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+	overflow: hidden;
+}
+.card__status {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	color:#9559F3;
+	font-weight: bold;
+}
+.card__status--pending {
+	background-color: #ecec3c;
+}
+.card__status--hold {
+	background-color: #cecccc;
+}
+.card__status--done {
+	background-color: #03ca02;
+}
+.card__title {
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.card__description {
+	margin-bottom: 20px;
+}
+.card__control {
+	margin-top: 20px;
+}
+
+/* ===== Todo ===== */
+.todo__title {
+	margin-bottom: 20px;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: .1em;
+	color: #9559F3;
+}
+.todo__tabs {
+	margin-bottom: 40px;
+}
+.todo__tabs-control {
+	margin-bottom: 20px;
+}
+.todo__tabs-btn.active {
+	background-color: #9559F3;
+}
+.todo__tabs-item {
+	display: none;
+	position: relative;
+	animation: fade 1s;
+}
+.todo__tabs-item.active {
+	display: block;
+}
+.todo__tabs-close {
+	right: 10px;
+	top: 20px;
+}
+.todo__actions {
+	display: none;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.todo__actions--active {
+	display: flex;
+}
+.todo__actions-item {
+	position: relative;
+	width: 100%;
+}
+.todo__actions-item + .todo__actions-item {
+	margin-left: 15px;
+}
+.todo__actions-item:hover .dropdown {
+	left: 0;
+	opacity: 1;
+}
+.todo__actions-link {
+	display: inline-block;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #9559F3;
+	border-radius: 5px;
+}
+.todo__item {
+	animation: fade 1s;
+}
+.todo__item + .todo__item {
+	margin-top: 20px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+	50%, 75% {
+		transform: scale(2.5);
+	}
+	78%, 100% {
+		opacity: 0;
+	}
+}
