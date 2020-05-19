@@ -4451,7 +4451,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./todo */ "./src/js/modules/todo.js");
 
 
 
@@ -4555,7 +4555,7 @@ var AddForm = /*#__PURE__*/function (_Form) {
         id: Date.now(),
         title: this.formInputs.title.value,
         description: this.formInputs.description.value,
-        status: _tabs__WEBPACK_IMPORTED_MODULE_16__["TODO_STATUS"].pending
+        status: _todo__WEBPACK_IMPORTED_MODULE_16__["TODO_STATUS"].pending
       };
 
       if (taskData.title && taskData.description) {

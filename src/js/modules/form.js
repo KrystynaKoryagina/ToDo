@@ -1,4 +1,4 @@
-import { TODO_STATUS } from './tabs';
+import { TODO_STATUS } from './todo';
 
 class Form {
 	constructor(formSelector) {
