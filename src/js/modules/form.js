@@ -25,8 +25,8 @@ class Form {
 }
 
 class AddForm extends Form {
-	constructor(formName) {
-		super(formName);
+	constructor(formSelector) {
+		super(formSelector);
 
 		this.addNewTask = null;
 		this.form.addEventListener('submit', this.onAddTaskFormHandler.bind(this));
@@ -52,8 +52,8 @@ class AddForm extends Form {
 }
 
 class SearchForm extends Form {
-	constructor(formName) {
-		super(formName);
+	constructor(formSelector) {
+		super(formSelector);
 
 		this.clearInputButton = this.form.querySelector('.js-clearInputButton');
 		this.searchTask = null;
